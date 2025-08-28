@@ -1,0 +1,6 @@
+package com.khonology.debugthugs
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
