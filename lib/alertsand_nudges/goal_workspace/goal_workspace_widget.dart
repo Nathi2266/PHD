@@ -98,7 +98,7 @@ class _GoalWorkspaceWidgetState extends State<GoalWorkspaceWidget> {
             },
           ),
           title: Text(
-            'Goal Workspace',
+            'My Workspace',
             style: FlutterFlowTheme.of(context).titleLarge.override(
                   font: GoogleFonts.interTight(
                     fontWeight: FontWeight.w600,

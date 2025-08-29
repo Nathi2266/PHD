@@ -217,7 +217,7 @@ class _EmployeePortalWidgetState extends State<EmployeePortalWidget> {
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
                                   context
-                                      .pushNamed(PDPPageFinalWidget.routeName);
+                                      .pushNamed(GoalWorkspaceWidget.routeName);
                                 },
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,

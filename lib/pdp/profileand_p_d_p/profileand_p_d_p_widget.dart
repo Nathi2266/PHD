@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,20 +95,29 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
                 size: 24.0,
               ),
-              Text(
-                'Add Goal',
-                style: FlutterFlowTheme.of(context).titleSmall.override(
-                      font: GoogleFonts.interTight(
+              InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.pushNamed(GoalsInputPageWidget.routeName);
+                },
+                child: Text(
+                  'Add Goal',
+                  style: FlutterFlowTheme.of(context).titleSmall.override(
+                        font: GoogleFonts.interTight(
+                          fontWeight: FontWeight.w600,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                        ),
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
                         fontStyle:
                             FlutterFlowTheme.of(context).titleSmall.fontStyle,
                       ),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w600,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                    ),
+                ),
               ),
             ].divide(SizedBox(width: 8.0)),
           ),
@@ -434,7 +444,7 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        'Technical Leadership Development',
+                                        'Customer Excellence',
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -470,7 +480,7 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                   ],
                                 ),
                                 Text(
-                                  'Develop skills to lead technical teams and drive architectural decisions',
+                                  'Key Performance Area/Key Performance Indicator',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -1494,8 +1504,9 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                   ),
                                 ),
                                 FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    context.pushNamed(
+                                        MilestoneInputWidget.routeName);
                                   },
                                   text: 'Add Milestone',
                                   icon: Icon(
@@ -1578,7 +1589,7 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        'Cloud Architecture Certification',
+                                        'Operational Excellence',
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(
@@ -1614,7 +1625,7 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                   ],
                                 ),
                                 Text(
-                                  'Achieve AWS Solutions Architect Professional certification',
+                                  'Key Performance Area/Key Performance Indicator',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -1666,7 +1677,7 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                         _model.expandableExpandableController2,
                                     child: ExpandablePanel(
                                       header: Text(
-                                        'Milestones (3)',
+                                        'Goals (3)',
                                         style: FlutterFlowTheme.of(context)
                                             .labelLarge
                                             .override(
@@ -2352,7 +2363,55 @@ class _ProfileandPDPWidgetState extends State<ProfileandPDPWidget> {
                                   onPressed: () {
                                     print('Button pressed ...');
                                   },
-                                  text: 'Add Milestone',
+                                  text: 'Add Goal',
+                                  icon: Icon(
+                                    Icons.add_rounded,
+                                    size: 20.0,
+                                  ),
+                                  options: FFButtonOptions(
+                                    width: double.infinity,
+                                    height: 40.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 0.0, 16.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    iconColor:
+                                        FlutterFlowTheme.of(context).secondary,
+                                    color: FlutterFlowTheme.of(context).accent2,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondary,
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                    elevation: 0.0,
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                ),
+                                FFButtonWidget(
+                                  onPressed: () {
+                                    print('Button pressed ...');
+                                  },
+                                  text: 'Add Goal',
                                   icon: Icon(
                                     Icons.add_rounded,
                                     size: 20.0,

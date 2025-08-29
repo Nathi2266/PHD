@@ -1,9 +1,10 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'pdp_widget.dart' show PdpWidget;
+import '/index.dart';
+import 'profileand_p_d_p_copy_widget.dart' show ProfileandPDPCopyWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 
-class PdpModel extends FlutterFlowModel<PdpWidget> {
+class ProfileandPDPCopyModel extends FlutterFlowModel<ProfileandPDPCopyWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for Expandable widget.
@@ -12,12 +13,6 @@ class PdpModel extends FlutterFlowModel<PdpWidget> {
   // State field(s) for Expandable widget.
   late ExpandableController expandableExpandableController2;
 
-  // State field(s) for Expandable widget.
-  late ExpandableController expandableExpandableController3;
-
-  // State field(s) for Expandable widget.
-  late ExpandableController expandableExpandableController4;
-
   @override
   void initState(BuildContext context) {}
 
@@ -25,7 +20,5 @@ class PdpModel extends FlutterFlowModel<PdpWidget> {
   void dispose() {
     expandableExpandableController1.dispose();
     expandableExpandableController2.dispose();
-    expandableExpandableController3.dispose();
-    expandableExpandableController4.dispose();
   }
 }

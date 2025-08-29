@@ -160,11 +160,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => GamifWidget(),
         ),
         FFRoute(
-          name: PdpWidget.routeName,
-          path: PdpWidget.routePath,
-          builder: (context, params) => PdpWidget(),
-        ),
-        FFRoute(
           name: PDPPageWidget.routeName,
           path: PDPPageWidget.routePath,
           builder: (context, params) => PDPPageWidget(),
@@ -183,6 +178,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: MilestoneInputWidget.routeName,
           path: MilestoneInputWidget.routePath,
           builder: (context, params) => MilestoneInputWidget(),
+        ),
+        FFRoute(
+          name: GoalsInputPageWidget.routeName,
+          path: GoalsInputPageWidget.routePath,
+          builder: (context, params) => GoalsInputPageWidget(),
+        ),
+        FFRoute(
+          name: ProfileandPDPCopyWidget.routeName,
+          path: ProfileandPDPCopyWidget.routePath,
+          builder: (context, params) => ProfileandPDPCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

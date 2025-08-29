@@ -25,8 +25,11 @@ export '/manager_dashboard/manager_portal/manager_portal_widget.dart'
     show ManagerPortalWidget;
 export '/auth_login/auth_login_widget.dart' show AuthLoginWidget;
 export '/gamif/gamif_widget.dart' show GamifWidget;
-export '/pdp/pdp_widget.dart' show PdpWidget;
 export '/p_d_p_page/p_d_p_page_widget.dart' show PDPPageWidget;
 export '/p_d_pcolumns/p_d_pcolumns_widget.dart' show PDPcolumnsWidget;
 export '/p_d_p_page_final/p_d_p_page_final_widget.dart' show PDPPageFinalWidget;
 export '/milestone_input/milestone_input_widget.dart' show MilestoneInputWidget;
+export '/goals_input_page/goals_input_page_widget.dart'
+    show GoalsInputPageWidget;
+export '/pdp/profileand_p_d_p_copy/profileand_p_d_p_copy_widget.dart'
+    show ProfileandPDPCopyWidget;

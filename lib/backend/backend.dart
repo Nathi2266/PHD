@@ -5,7 +5,6 @@ import '../auth/firebase_auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'schema/util/firestore_util.dart';
 
-import 'schema/tseing_record.dart';
 import 'schema/alert_record.dart';
 import 'schema/users_record.dart';
 import 'schema/season_challenge_record.dart';
@@ -18,6 +17,7 @@ import 'schema/team_record.dart';
 import 'schema/audit_log_record.dart';
 import 'schema/badge_record.dart';
 import 'schema/goals_record.dart';
+import 'schema/settings_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -26,7 +26,6 @@ export 'schema/index.dart';
 export 'schema/util/firestore_util.dart';
 export 'schema/util/schema_util.dart';
 
-export 'schema/tseing_record.dart';
 export 'schema/alert_record.dart';
 export 'schema/users_record.dart';
 export 'schema/season_challenge_record.dart';
@@ -39,43 +38,7 @@ export 'schema/team_record.dart';
 export 'schema/audit_log_record.dart';
 export 'schema/badge_record.dart';
 export 'schema/goals_record.dart';
-
-/// Functions to query TseingRecords (as a Stream and as a Future).
-Future<int> queryTseingRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      TseingRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<TseingRecord>> queryTseingRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      TseingRecord.collection,
-      TseingRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<TseingRecord>> queryTseingRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      TseingRecord.collection,
-      TseingRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
+export 'schema/settings_record.dart';
 
 /// Functions to query AlertRecords (as a Stream and as a Future).
 Future<int> queryAlertRecordCount({
@@ -516,6 +479,46 @@ Future<List<GoalsRecord>> queryGoalsRecordOnce({
     queryCollectionOnce(
       GoalsRecord.collection,
       GoalsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query SettingsRecords (as a Stream and as a Future).
+Future<int> querySettingsRecordCount({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      SettingsRecord.collection(parent),
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<SettingsRecord>> querySettingsRecord({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      SettingsRecord.collection(parent),
+      SettingsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<SettingsRecord>> querySettingsRecordOnce({
+  DocumentReference? parent,
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      SettingsRecord.collection(parent),
+      SettingsRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
