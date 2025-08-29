@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "880879891614",
-    "project_id": "debug-thugs-ed2f6",
-    "storage_bucket": "debug-thugs-ed2f6.firebasestorage.app"
+    "project_number": "911385203944",
+    "project_id": "debugthugs-37266",
+    "storage_bucket": "debugthugs-37266.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:880879891614:android:606a3c0e484fd1e162b78f",
+        "mobilesdk_app_id": "1:911385203944:android:a5e6e5a1159a035004655d",
         "android_client_info": {
           "package_name": "com.khonology.debugthugs"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAxA71lBM0TlLM7GLkavxMyXA-mNWvx6fw"
+          "current_key": "AIzaSyCnqCGtRAmKxtNHB0I7UgnVJa-KztYS3k0"
         }
       ],
       "services": {

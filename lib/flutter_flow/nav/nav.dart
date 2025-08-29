@@ -76,18 +76,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : Auth2LoginWidget(),
+          appStateNotifier.loggedIn ? AuthLoginWidget() : AuthLoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomePageWidget() : Auth2LoginWidget(),
-        ),
-        FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
-          builder: (context, params) => HomePageWidget(),
+              appStateNotifier.loggedIn ? AuthLoginWidget() : AuthLoginWidget(),
         ),
         FFRoute(
           name: ChatAiScreenWidget.routeName,
@@ -95,54 +90,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ChatAiScreenWidget(),
         ),
         FFRoute(
-          name: Auth2CreateWidget.routeName,
-          path: Auth2CreateWidget.routePath,
-          builder: (context, params) => Auth2CreateWidget(),
-        ),
-        FFRoute(
-          name: Auth2LoginWidget.routeName,
-          path: Auth2LoginWidget.routePath,
-          builder: (context, params) => Auth2LoginWidget(),
-        ),
-        FFRoute(
-          name: Auth2ForgotPasswordWidget.routeName,
-          path: Auth2ForgotPasswordWidget.routePath,
-          builder: (context, params) => Auth2ForgotPasswordWidget(),
-        ),
-        FFRoute(
-          name: Auth2CreateProfileWidget.routeName,
-          path: Auth2CreateProfileWidget.routePath,
-          builder: (context, params) => Auth2CreateProfileWidget(),
-        ),
-        FFRoute(
-          name: Auth2ProfileWidget.routeName,
-          path: Auth2ProfileWidget.routePath,
-          builder: (context, params) => Auth2ProfileWidget(),
-        ),
-        FFRoute(
-          name: Auth2EditProfileWidget.routeName,
-          path: Auth2EditProfileWidget.routePath,
-          builder: (context, params) => Auth2EditProfileWidget(),
-        ),
-        FFRoute(
-          name: NavigavitionrespondWidget.routeName,
-          path: NavigavitionrespondWidget.routePath,
-          builder: (context, params) => NavigavitionrespondWidget(),
-        ),
-        FFRoute(
-          name: LoginWidget.routeName,
-          path: LoginWidget.routePath,
-          builder: (context, params) => LoginWidget(),
-        ),
-        FFRoute(
           name: ProfileWidget.routeName,
           path: ProfileWidget.routePath,
           builder: (context, params) => ProfileWidget(),
-        ),
-        FFRoute(
-          name: SwWidget.routeName,
-          path: SwWidget.routePath,
-          builder: (context, params) => SwWidget(),
         ),
         FFRoute(
           name: AccessDeniedWidget.routeName,
@@ -160,14 +110,79 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => RepositoryAuditWidget(),
         ),
         FFRoute(
-          name: ManagerDashboardPageWidget.routeName,
-          path: ManagerDashboardPageWidget.routePath,
-          builder: (context, params) => ManagerDashboardPageWidget(),
+          name: SeasonchallengeWidget.routeName,
+          path: SeasonchallengeWidget.routePath,
+          builder: (context, params) => SeasonchallengeWidget(),
         ),
         FFRoute(
-          name: EmplWidget.routeName,
-          path: EmplWidget.routePath,
-          builder: (context, params) => EmplWidget(),
+          name: AlertsWidget.routeName,
+          path: AlertsWidget.routePath,
+          builder: (context, params) => AlertsWidget(),
+        ),
+        FFRoute(
+          name: ProgressVisualWidget.routeName,
+          path: ProgressVisualWidget.routePath,
+          builder: (context, params) => ProgressVisualWidget(),
+        ),
+        FFRoute(
+          name: GoalWorkspaceWidget.routeName,
+          path: GoalWorkspaceWidget.routePath,
+          builder: (context, params) => GoalWorkspaceWidget(),
+        ),
+        FFRoute(
+          name: TeamDashboardReviewManagerWidget.routeName,
+          path: TeamDashboardReviewManagerWidget.routePath,
+          builder: (context, params) => TeamDashboardReviewManagerWidget(),
+        ),
+        FFRoute(
+          name: ProfileandPDPWidget.routeName,
+          path: ProfileandPDPWidget.routePath,
+          builder: (context, params) => ProfileandPDPWidget(),
+        ),
+        FFRoute(
+          name: EmployeePortalWidget.routeName,
+          path: EmployeePortalWidget.routePath,
+          builder: (context, params) => EmployeePortalWidget(),
+        ),
+        FFRoute(
+          name: ManagerPortalWidget.routeName,
+          path: ManagerPortalWidget.routePath,
+          builder: (context, params) => ManagerPortalWidget(),
+        ),
+        FFRoute(
+          name: AuthLoginWidget.routeName,
+          path: AuthLoginWidget.routePath,
+          builder: (context, params) => AuthLoginWidget(),
+        ),
+        FFRoute(
+          name: GamifWidget.routeName,
+          path: GamifWidget.routePath,
+          builder: (context, params) => GamifWidget(),
+        ),
+        FFRoute(
+          name: PdpWidget.routeName,
+          path: PdpWidget.routePath,
+          builder: (context, params) => PdpWidget(),
+        ),
+        FFRoute(
+          name: PDPPageWidget.routeName,
+          path: PDPPageWidget.routePath,
+          builder: (context, params) => PDPPageWidget(),
+        ),
+        FFRoute(
+          name: PDPcolumnsWidget.routeName,
+          path: PDPcolumnsWidget.routePath,
+          builder: (context, params) => PDPcolumnsWidget(),
+        ),
+        FFRoute(
+          name: PDPPageFinalWidget.routeName,
+          path: PDPPageFinalWidget.routePath,
+          builder: (context, params) => PDPPageFinalWidget(),
+        ),
+        FFRoute(
+          name: MilestoneInputWidget.routeName,
+          path: MilestoneInputWidget.routePath,
+          builder: (context, params) => MilestoneInputWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -338,7 +353,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/auth2Login';
+            return '/authLogin';
           }
           return null;
         },

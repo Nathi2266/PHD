@@ -1765,6 +1765,7 @@ class _RepositoryAuditWidgetState extends State<RepositoryAuditWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .success,
+                                                        fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -2007,7 +2008,7 @@ class _RepositoryAuditWidgetState extends State<RepositoryAuditWidget> {
                                       ),
                                     ].divide(SizedBox(width: 16.0)),
                                   ),
-                                ].divide(SizedBox(height: 12.0)),
+                                ].divide(SizedBox(height: 15.0)),
                               ),
                             ),
                           ),

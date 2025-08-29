@@ -23,10 +23,10 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
-    "serve": "firebase -P debug-thugs-ed2f6 emulators:start --only functions",
-    "shell": "firebase -P debug-thugs-ed2f6 functions:shell",
+    "serve": "firebase -P debugthugs-37266 emulators:start --only functions",
+    "shell": "firebase -P debugthugs-37266 functions:shell",
     "start": "npm run shell",
-    "logs": "firebase -P debug-thugs-ed2f6 functions:log",
+    "logs": "firebase -P debugthugs-37266 functions:log",
     "compile": "cp ../../tsconfig.template.json ./tsconfig-compile.json && tsc --project tsconfig-compile.json"
   },
   "engines": {

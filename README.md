@@ -1,4 +1,4 @@
-# Debug-Thugs
+# DebugThugs
 
 A new Flutter project.
 
